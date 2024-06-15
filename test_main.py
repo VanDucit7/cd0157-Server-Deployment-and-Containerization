@@ -14,6 +14,9 @@ PASSWORD = 'huff-puff'
 
 @pytest.fixture
 def client():
+    """
+    Vermoric test Triggered the build by a "git push"
+    """
     os.environ['JWT_SECRET'] = SECRET
     main.APP.config['TESTING'] = True
     client = main.APP.test_client()
